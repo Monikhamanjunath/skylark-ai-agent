@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "projects": [
+        {
+            "name": "skylark-frontend",
+            "root": "frontend",
+            "framework": "vite"
+        },
+        {
+            "name": "skylark-backend",
+            "root": "backend",
+            "framework": "fastapi"
+        }
+    ]
+}
