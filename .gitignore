@@ -1,0 +1,19 @@
+# Environment variables (Secret API keys)
+.env
+.env.local
+.env.development.local
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db
