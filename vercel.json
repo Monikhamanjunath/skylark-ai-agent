@@ -1,13 +1,28 @@
 {
     "version": 2,
+    "services": {
+        "frontend": {
+            "root": "frontend",
+            "framework": "vite"
+        },
+        "backend": {
+            "root": "backend"
+        }
+    },
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "backend/app/main.py"
+            "destination": {
+                "type": "service",
+                "service": "backend"
+            }
         },
         {
             "source": "/(.*)",
-            "destination": "frontend/$1"
+            "destination": {
+                "type": "service",
+                "service": "frontend"
+            }
         }
     ]
 }
