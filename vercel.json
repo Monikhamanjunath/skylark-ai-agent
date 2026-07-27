@@ -1,15 +1,27 @@
 {
-    "version": 2,
-    "projects": [
-        {
-            "name": "skylark-frontend",
+    "services": {
+        "frontend": {
             "root": "frontend",
             "framework": "vite"
         },
+        "backend": {
+            "root": "backend"
+        }
+    },
+    "rewrites": [
         {
-            "name": "skylark-backend",
-            "root": "backend",
-            "framework": "fastapi"
+            "source": "/api(/.*)?",
+            "destination": {
+                "type": "service",
+                "service": "backend"
+            }
+        },
+        {
+            "source": "/(.*)",
+            "destination": {
+                "type": "service",
+                "service": "frontend"
+            }
         }
     ]
 }
